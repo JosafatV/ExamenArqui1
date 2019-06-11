@@ -5,3 +5,4 @@ int method_with_static_variables (int x, int y, int z) {
 }
 	
 //readelf -a static.o
+
