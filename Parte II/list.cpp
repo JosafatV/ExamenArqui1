@@ -7,7 +7,7 @@ int main()
 {
 	list<double> myList;
 	list<double>::iterator i;
-	int j = 20; //= 1<<20;
+	int j = 1<<17;
 	
     /* Llenar el contenedor de valores */ 
     srand (time(NULL)); //randomize seed
