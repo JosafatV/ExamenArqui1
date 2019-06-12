@@ -1,6 +1,10 @@
 # Installing valgrind
 	http://www.valgrind.org/downloads/repository.html
 
+Dependency listed in the install
+	sudo apt-get update
+	sudo apt-get install autoconf
+
 
 # General (simple) valgrind tutorial:
 	http://cs.ecs.baylor.edu/~donahoo/tools/valgrind/
