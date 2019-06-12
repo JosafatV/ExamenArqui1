@@ -5,3 +5,5 @@ int method_without_static_variables (int x, int y, int z) {
 }
 	
 //readelf -a notStatic.o
+
+// gcc -O0  -S -fno-asynchronous-unwind-tables  static.c
