@@ -1,11 +1,32 @@
-# ExamenArqui1
+Instituto Tecnológico de Costa Rica <br /> 
+Área Académica de Ingeniería en Computadores  <br /> 
+Arquitectura de Computadores 1  <br /> 
 
-Examen práctico de arquitectura de computadores 1 - I 2019
-Instalacion de requerimientos:
 
+### Examen práctico
+
+Josafat Vargas - 2013030892  <br /> 
+Victor Montero - 2013014152
+
+
+### Instalacion de requerimientos:
+
+g++
+```
+sudo apt-get update
+sudo apt-get install g++
+```
+ 
+autoconf
+```	
+sudo apt-get update
+sudo apt-get install autoconf
+
+```
+
+### Ejecución de programas
 
 A continuación se presentan las instrucciones de ejecucion divididas según el punto al que corresponden en el enunciado del examen
-
 **Parte 1**
  - Punto 4
 Para obtener el codigo ensamblador de las funciones se utilizan los siguientes comandos:
@@ -62,4 +83,23 @@ valgrind --tool=massif --heap=yes --time-unit=B ./staticMemConsum
 valgrind --tool=massif --stacks=yes --time-unit=B ./staticMemConsum
 ```
 
+
 **Parte 2**
+
+- Punto 4
+
+Acceda a la carpeta Parte II:
+```
+cd ExamenArqui1/Parte\ II
+```
+Compile los programas con:
+```
+g++ -g -o "vector" "vector.cpp"
+g++ -g -o "list" "list.cpp"
+```
+
+Ejecute la herramienta de valgrind:
+```
+valgrind --tool=cachegrind ./vector
+valgrind --tool=cachegrind ./list
+ ```
