@@ -7,7 +7,7 @@ int main()
 {
 	vector<double> myVector;
 	vector<double>::iterator i;
-	int j = 1<<17;
+	int j = (1<<25);
 	
     /* Llenar el contenedor de valores */ 
     srand (time(NULL)); //randomize seed
@@ -18,14 +18,26 @@ int main()
 		myVector.push_back(randNum);
 		j--;
 	}
-	
+	cout << myVector.size() << endl;
+	double frontera = 0;
+	//int k = 0;
 	
 	/* Accesar el contenedor */ 
-	for (i = myVector.begin()+1; i != myVector.end(); ++i) {
-		//cout << *(i-1) << ", " << *i << ", " << *(i+1) << endl;
-		double y = ( *(i-1)+*i+*(i+1) ) / 3; 
-		//cout << y << endl;
+	for (i = myVector.begin(); i != myVector.end(); ++i) {
+		
+		if (i == myVector.begin()) {
+			double y = ( frontera + *i + *(i+1) ) / 3;
+			//cout << "1st: " << y << " for it:" << k++ << endl;
+		}
+		else if (i == myVector.end()-1 ) {
+			double y = ( *(i-1)+*i+frontera ) / 3; 
+			//cout << "last: " << y << " for it:" << k++ << endl;
+		}
+		else {
+			//cout << *(i-1) << ", " << *i << ", " << *(i+1) << endl;
+			double y = ( *(i-1)+*i+*(i+1) ) / 3; 
+			//cout << y << " for it:" << k++ << endl;
+		}
 	}
-	
     return 0;
 }

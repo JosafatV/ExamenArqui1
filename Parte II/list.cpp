@@ -7,7 +7,8 @@ int main()
 {
 	list<double> myList;
 	list<double>::iterator i;
-	int j = 1<<17;
+	list<double>::iterator t;
+	unsigned long int j = 1<<25;
 	
     /* Llenar el contenedor de valores */ 
     srand (time(NULL)); //randomize seed
@@ -19,16 +20,41 @@ int main()
 		j--;
 	}
 	
-	i = myList.begin()++;
+	i = myList.begin();
+	t = --myList.end();  //define last iteration condition
+	//int k = 0;
+	
+	double frontera = 0;
 	
 	/* Accesar el contenedor */ 
-	for (;i != --myList.end();) {
-		double current = *i--;
-		double previous= *i++;
-		double next = *++i;
-		//cout << previous << " " << current << " " << next << endl;
-		double y = (current + previous + next)/3;
-		//cout << y << endl;
+	for (;i != myList.end();) {
+		
+		if (i == myList.begin()) {
+			double current = frontera;
+			double previous= *i;
+			double next = *++i;
+			
+			//cout << previous << " " << current << " " << next << endl;
+			double y = (current + previous + next)/3;
+			//cout << "1st: " << y << " for it:" << k++  << endl;
+		}
+		else if ( i == t) {
+			double current = *i--;
+			double previous = *i++;
+			double next = frontera;
+			++i;			
+			//cout << previous << " " << current << " " << next << endl;
+			double y = (current + previous + next)/3;
+			//cout << "last: " << y<< " for it:" << k++  << endl;
+		} else {
+			double current = *i--;
+			double previous= *i++;
+			double next = *++i;
+			
+			//cout << previous << " " << current << " " << next << endl;
+			double y = (current + previous + next)/3;
+			//cout << y<< " for it:" << k++  << endl;
+		}
 	}
 	
     return 0;
