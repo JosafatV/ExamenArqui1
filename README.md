@@ -5,6 +5,7 @@ Instalacion de requerimientos:
 
 
 A continuación se presentan las instrucciones de ejecucion divididas según el punto al que corresponden en el enunciado del examen
+
 **Parte 1**
  - Punto 4
 Para obtener el codigo ensamblador de las funciones se utilizan los siguientes comandos:
