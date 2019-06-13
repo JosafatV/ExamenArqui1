@@ -61,3 +61,5 @@ valgrind --tool=massif --stacks=yes --time-unit=B ./notStaticMemConsum
 valgrind --tool=massif --heap=yes --time-unit=B ./staticMemConsum
 valgrind --tool=massif --stacks=yes --time-unit=B ./staticMemConsum
 ```
+
+**Parte 2**
