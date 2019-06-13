@@ -17,12 +17,15 @@ sudo apt-get update
 sudo apt-get install g++
 ```
  
-autoconf
+autoconf (for valgrind)
 ```	
 sudo apt-get update
 sudo apt-get install autoconf
 
 ```
+
+valgrind  <br /> 
+http://www.valgrind.org/downloads/repository.html
 
 ### Ejecución de programas
 
@@ -104,3 +107,17 @@ Ejecute la herramienta de valgrind:
 valgrind --tool=cachegrind ./vector
 valgrind --tool=cachegrind ./list
  ```
+
+ Los datos de salida de valgrind tienen la siguiente leyenda:
+ 
+* I: instrutions lookups
+* I1: L1 instruction cache
+* LLi: last level instruction memory
+
+* D: data lookups
+* D1: L1 data cache
+* LLd: last level data memory
+
+* LL: overall last level accesses
+
+ 
